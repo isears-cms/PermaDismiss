@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "perma-dismiss",
+    "version": "0.1",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html",
+        "default_title": "Perma-Dismiss"
+    },
+
+    "content_scripts" : [
+        {
+            "matches": [
+                "*://jiraent.cms.gov/*"
+            ],
+            "js": ["perma-dismiss.js"]
+
+        }
+    ]
+}
